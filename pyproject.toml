@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "switch-layout-attestation"
+version = "1.0.0"
+description = "Исправление раскладки текста из буфера обмена со статистикой SQLite"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.1.7,<9",
+    "pyperclip>=1.11.0,<2",
+    "SQLAlchemy>=2.0.52,<3",
+]
+
+[project.scripts]
+switch-layout = "switch_layout:cli"
+switch_layout = "switch_layout:cli"
+
+[tool.setuptools]
+py-modules = ["switch_layout"]
+
+[tool.ruff]
